@@ -50,4 +50,13 @@ public class NoticeDAOTest extends MyjuintTest {
 		int result = noticeDAO.add(noticeDTO);
 		assertEquals(1, result);
 	}
+	
+	// delete
+	@Test
+	public void delete() throws Exception {
+		NoticeDTO noticeDTO = new NoticeDTO();
+		noticeDTO.setNum(5);
+		int result = noticeDAO.delete(noticeDTO);
+		assertEquals(1, result);
+	}
 }
