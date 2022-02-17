@@ -12,5 +12,10 @@
  	<select id="detail" resultType="com.iu.s1.notice.NoticeDTO">
  		SELECT * FROM NOTICE WHERE NUM = #{num}
  	</select>
+ 	
+ 	<insert id="add" parameterType="com.iu.s1.notice.NoticeDTO">
+ 		INSERT INTO NOTICE (NUM, TITLE, CONTENTS, WRITER, REGDATE, HIT)
+		VALUES (NOTICE_SEQ.NEXTVAL, #{num}, #{title}, #{contents}, #{regDate}, #{hit})
+ 	</insert>
  
  </mapper>
