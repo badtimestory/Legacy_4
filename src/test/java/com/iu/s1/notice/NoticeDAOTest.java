@@ -27,4 +27,12 @@ public class NoticeDAOTest extends MyjuintTest {
 		assertNotEquals(0, ar.size());
 	}
 	
+	// Detail
+	@Test
+	public void detailTest() throws Exception {
+		NoticeDTO noticeDTO = new NoticeDTO();
+		noticeDTO.setNum(1);
+		noticeDTO = noticeDAO.detail(noticeDTO);
+		assertNotNull(noticeDTO);
+	}
 }

@@ -5,8 +5,12 @@
     
  <mapper namespace="com.iu.s1.notice.NoticeDAO">
  
- 	<select id="list" parameterType="com.iu.s1.notice.NoticeDTO">
+ 	<select id="list" resultType="com.iu.s1.notice.NoticeDTO">
  		SELECT * FROM NOTICE
+ 	</select>
+ 	
+ 	<select id="detail" resultType="com.iu.s1.notice.NoticeDTO">
+ 		SELECT * FROM NOTICE WHERE NUM = #{num}
  	</select>
  
  </mapper>

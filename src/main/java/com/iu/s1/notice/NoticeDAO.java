@@ -17,4 +17,9 @@ public class NoticeDAO {
 	public List<NoticeDTO> list() throws Exception {
 		return sqlSession.selectList(NAMESPACE+"list");
 	}
+	
+	// detail
+	public NoticeDTO detail(NoticeDTO noticeDTO) throws Exception {
+		return sqlSession.selectOne(NAMESPACE+"detail", noticeDTO);
+	}
 }
