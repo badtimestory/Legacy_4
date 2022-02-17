@@ -43,8 +43,8 @@ public class BankBookDAOTest extends MyjuintTest {
 	@Test
 	public void detailTest() throws Exception {
 		BankBookDTO bankBookDTO = new BankBookDTO();
-		bankBookDTO.setBookNumber(1L);
-		bankBookDTO = bankBookDAO.detail(2L);
+		bankBookDTO.setBookNumber(4L);
+		bankBookDTO = bankBookDAO.detail(bankBookDTO);
 		assertNotNull(bankBookDTO);
 	}
 	
@@ -52,14 +52,8 @@ public class BankBookDAOTest extends MyjuintTest {
 	@Test
 	public void deleteTest() throws Exception {
 		BankBookDTO bankBookDTO = new BankBookDTO();
-		bankBookDTO.setBookNumber(2L);
+		bankBookDTO.setBookNumber(3L);
 		int result = bankBookDAO.delete(bankBookDTO);
 		assertEquals(1, result);
 	}
-	
-	
-	
-	
-	
-	
 }
