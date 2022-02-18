@@ -30,5 +30,6 @@
     </tr>
   </c:forEach>
   </table>
+  <a href="./add">글 쓰기</a>
 </body>
 </html>

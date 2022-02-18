@@ -33,4 +33,16 @@ public class NoticeController {
 		model.addAttribute("dto", noticeDTO);
 	}
 	
+	// add form 이동
+	@RequestMapping(value = "add", method = RequestMethod.GET)
+	public void add() throws Exception {
+		
+	}
+	
+	@RequestMapping(value = "add", method = RequestMethod.POST)
+	public String add(NoticeDTO noticeDTO) throws Exception {
+		int result = noticeService.add(noticeDTO);
+		
+		return "redirect:./list";
+	}
 }

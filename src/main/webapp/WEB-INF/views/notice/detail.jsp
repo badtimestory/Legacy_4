@@ -16,4 +16,5 @@
   <h3>REGDATE: ${dto.regDate}</h3>
   <h3>HIT: ${dto.hit}</h3>
 </body>
+<a href="./list">BACK</a>
 </html>
