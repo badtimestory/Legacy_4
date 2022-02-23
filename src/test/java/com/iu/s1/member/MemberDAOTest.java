@@ -36,7 +36,15 @@ public class MemberDAOTest extends MyjuintTest{
 		memberDTO = memberDAO.login(memberDTO);
 		
 		assertNotNull(memberDTO);
+
+	}
+	
+	@Test
+	public void mypageTest() throws Exception {
+		MemberDTO memberDTO = new MemberDTO();
+		memberDTO.setId("ID1");
+		memberDTO = memberDAO.mypage(memberDTO);
 		
-		
+		assertNotNull(memberDTO);
 	}
 }

@@ -13,12 +13,17 @@
     <fieldset>
       <legend>ID</legend>
     <!-- name 속성은 Parameter -->
-      <input type="text" name="id" placeholder="아이디">
+      <input type="text" name="id" value="${cookie.remember.value}" placeholder="아이디">
     </fieldset>
 
     <fieldset>
       <legend>Password</legend>
       <input type="password" name="pw" placeholder="비밀번호">
+    </fieldset>
+    
+    <fieldset>
+      <legend>Remember Me</legend>
+      <input type="checkbox" name="remember" value="1">
     </fieldset>
 
     <fieldset>
