@@ -17,4 +17,6 @@
   <h3>HIT: ${dto.hit}</h3>
 </body>
 <a href="./list">BACK</a>
+<a href="./update">Update</a>
+<a href="./delete?num=${dto.num}">Delete</a>
 </html>

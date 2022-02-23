@@ -29,5 +29,11 @@ public class NoticeService {
 		
 		return noticeDAO.add(noticeDTO);
 	}
+	
+	// delete
+	public int delete(NoticeDTO noticeDTO) throws Exception {
+		
+		return noticeDAO.delete(noticeDTO);
+	}
 
 }

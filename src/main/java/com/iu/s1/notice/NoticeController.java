@@ -16,6 +16,14 @@ public class NoticeController {
 	@Autowired
 	private NoticeService noticeService;
 	
+	// delete
+	@RequestMapping(value = "delete")
+	public String delete(NoticeDTO noticeDTO) throws Exception {
+		int result = noticeService.delete(noticeDTO);
+		
+		return "redirect:./list";
+	}
+	
 	// list
 	@RequestMapping(value = "list", method = RequestMethod.GET)
 	public ModelAndView list(ModelAndView mv) throws Exception {
