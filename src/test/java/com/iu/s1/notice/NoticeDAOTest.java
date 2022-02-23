@@ -44,7 +44,6 @@ public class NoticeDAOTest extends MyjuintTest {
 		noticeDTO.setTitle("통장테스트");
 		noticeDTO.setContents("테스트통장입니다.");
 		noticeDTO.setWriter("유재석");
-		noticeDTO.setRegDate("2020-02-17");
 		noticeDTO.setHit(300);
 		
 		int result = noticeDAO.add(noticeDTO);

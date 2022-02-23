@@ -21,5 +21,17 @@
  	<delete id="delete" parameterType="NoticeDTO">
  		DELETE FROM NOTICE WHERE NUM = #{num}
  	</delete>
+ 	
+ 	<update id="update" parameterType="NoticeDTO">
+ 		<!-- 수정가능한 부분만 수정 -->
+ 		<!-- UPDATE NOTICE SET 
+ 		TITLE = #{title}, CONTENTS = #{contents} WHERE NUM = #{num}  -->
+ 		
+ 	 	<!-- NOTICE 전체 보내기 -->
+ 		UPDATE NOTICE SET 
+ 		NUM = #{num}, TITLE = #{title}, CONTENTS = #{contents},
+ 		WRITER = #{writer}, REGDATE = #{regDate}, HIT = #{hit}
+ 		WHERE NUM = #{num}
+ 	</update>
  
  </mapper>

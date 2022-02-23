@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-  <h1>Detail Page Test</h1>
+  <h1>Notice Detail Page Test</h1>
   
   <h3>NUM: ${dto.num}</h3>
   <h3>TITLE: ${dto.title} </h3>
@@ -17,6 +17,6 @@
   <h3>HIT: ${dto.hit}</h3>
 </body>
 <a href="./list">BACK</a>
-<a href="./update">Update</a>
+<a href="./update?num=${dto.num}">Update</a>
 <a href="./delete?num=${dto.num}">Delete</a>
 </html>

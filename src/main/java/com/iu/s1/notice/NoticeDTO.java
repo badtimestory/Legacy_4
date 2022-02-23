@@ -1,12 +1,14 @@
 package com.iu.s1.notice;
 
+import java.sql.Date;
+
 public class NoticeDTO {
 
 	private Integer num;
 	private String title;
 	private String contents;
 	private String writer;
-	private String regDate;
+	private Date regDate;
 	private Integer hit;
 	
 	public Integer getNum() {
@@ -33,10 +35,10 @@ public class NoticeDTO {
 	public void setWriter(String writer) {
 		this.writer = writer;
 	}
-	public String getRegDate() {
+	public Date getRegDate() {
 		return regDate;
 	}
-	public void setRegDate(String regDate) {
+	public void setRegDate(Date regDate) {
 		this.regDate = regDate;
 	}
 	public Integer getHit() {
