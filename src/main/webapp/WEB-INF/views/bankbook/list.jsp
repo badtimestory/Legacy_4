@@ -16,12 +16,14 @@
   <!-- bookName, bookRate, bookSale -->
     <table>
       <tr>
+      	<th>상품번호</th>
         <th>상품명</th>
         <th>이자율</th>
         <th>판매</th>
       </tr>
   	  <c:forEach items="${list}" var="book">
   	  <tr>
+  	  	<td>${book.bookNumber}</td>
   	    <td><a href="./detail?bookNumber=${book.bookNumber}">${book.bookName}</a></td>
   	    <td>${book.bookRate}</td>
   	    <td>${book.bookSale}</td>
