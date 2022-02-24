@@ -8,13 +8,22 @@
 <title>Insert title here</title>
 </head>
 <body>
+  <c:import url="../template/table.jsp"></c:import>
   <h1>BankBook Detail test page</h1>
- 
-    <h3>Name : ${dto.bookName}</h3>
-    <h3>Contents : ${dto.bookContents}</h3>
-    <h3>Rate : ${dto.bookRate}</h3>
-    <h3>Sale : ${dto.bookSale}</h3>
-  
+    <table>
+    	<tr>
+    	  <th>Name</th>
+    	  <th>Contents</th>
+    	  <th>Rate</th>
+    	  <th>Sale</th>
+    	</tr>
+    	  <td>${dto.bookName}</td>
+    	  <td>${dto.bookContents}</td>
+    	  <td>${dto.bookRate}</td>
+    	  <td>${dto.bookSale}</td>
+    	<tr>
+    </table> 
+    
   	<a href="./list">List</a>
   	<a href="./update?bookNumber=${dto.bookNumber}">Update</a>
   	<a href="./delete?bookNumber=${dto.bookNumber}">Delete</a>

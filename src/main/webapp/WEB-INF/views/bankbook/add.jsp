@@ -10,11 +10,14 @@
   <h1>Add Test page</h1>
   
   <form action="./add" method="POST">
-  
+  	
+  	<label>BookName</label>
     <input type="text" name="bookName" placeholder="BookName">
     
+    <label>BookRate</label>
     <input type="text" name="bookRate" placeholder="BookRate">
     
+    <label>BookContents</label>
     <textarea name="bookContents" rows="10" cols="10"></textarea>
     
     <div>

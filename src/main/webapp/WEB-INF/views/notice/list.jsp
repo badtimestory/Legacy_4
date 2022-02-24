@@ -10,6 +10,7 @@
 </head>
 <body>
   <c:import url="../template/header.jsp"></c:import>
+  <c:import url="../template/table.jsp"></c:import>
   <h1>Notice List Test Page</h1>
   <table>
     <tr>

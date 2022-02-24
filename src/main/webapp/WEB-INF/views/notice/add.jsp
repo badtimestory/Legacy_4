@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-  <h1>Test add Page</h1>
+  <h1>Notice add Page</h1>
   
   <!-- form 태그를 이용해 server로 요청을 보냄 -->
   <form action="./add" method="POST">
@@ -21,9 +21,6 @@
     <div>
     <a href="./list">뒤로 가기</a>
     </div>
-    
-    
-  
   </form>
 </body>
 </html>
