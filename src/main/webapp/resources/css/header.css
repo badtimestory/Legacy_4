@@ -32,28 +32,6 @@
 	vertical-align: text-bottom;
 }
 
-h1 {
-    margin-top: 30px;
-    margin-bottom: 30px;
-    text-align: center;
-}
-table {
-    margin: 0 auto;
-    border-collapse: collapse;
-    border-spacing: 5px;
-    width: 800px;
-    height: 500px;
-}
-table th {
-    color: white;
-    font-weight: bold;
-    background-color: black;
-    text-align: center;
-}
-table td {
-    font-size: 12px;
-    text-align: center;
-}
 .subject {
     text-align: left;
 }

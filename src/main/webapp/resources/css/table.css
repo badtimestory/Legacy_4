@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+.table-basic {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.table-basic td, .table-basic th {
+	border: 1px solid #000000;
+	border-spacing: 0;
+	height: 30px;
+}
+
+.table-basic tr:first-child {
+	background-color: #484848;
+	color: #ffffff;
+}
+
+.title {
+	margin-top: 50px;
+}
+
+.table-container > .table-basic {
+	margin-top: 50px;
+}

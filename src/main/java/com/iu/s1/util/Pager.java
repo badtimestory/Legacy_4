@@ -19,6 +19,9 @@ public class Pager {
 	private boolean pre;
 	private boolean next;
 	
+	// ---------- 검색 사용 변수 ----------
+	private String search;
+	private String kind;
 	
 	public void makeRow() {
 		this.startRow = (this.getPage() - 1) * this.getPerPage() + 1;
@@ -40,8 +43,6 @@ public class Pager {
 		
 		// 4. 전체 Block의 갯수 구하기
 		Long totalBlock = totalPage / perBlock;
-		
-		// 5. 다시 확인해보기
 		if(totalPage % perBlock != 0) {
 			totalBlock++;
 		}
@@ -168,4 +169,30 @@ public class Pager {
 	public void setNext(boolean next) {
 		this.next = next;
 	}
+
+	public String getSearch() {
+		// 검색어가 없으면 serch = null
+		if(this.search == null) {
+			this.search = "";
+		}
+		
+//		this.search = "%" + search + "%";
+		
+		return search;
+	}
+
+	public void setSearch(String search) {
+		this.search = search;
+	}
+
+	public String getKind() {
+		return kind;
+	}
+
+	public void setKind(String kind) {
+		this.kind = kind;
+	}
+	
+	
+	
 }
