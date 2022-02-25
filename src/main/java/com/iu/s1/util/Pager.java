@@ -10,6 +10,12 @@ public class Pager {
 	// 끝 번호
 	private Integer endNum;
 	
+	// ----- JSP paging number -----
+	private Integer beginPagingNum;
+	private Integer endPagingNum;
+	private boolean before;
+	private boolean after;
+	
 	public void makeRow() {
 		
 		this.beginNum = (this.getCurPage()-1) * this.getViewPage() + 1;
@@ -37,6 +43,12 @@ public class Pager {
 		if(totalPage % PagingCount != 0) {
 			++totalPage;
 		}
+		
+		// 현재 페이징이 몇번째 인지 확인
+		// 	getCurpage
+		//	2
+		int pagingBundle = this.getCurPage() / PagingCount;
+		
 	}
 	
 	public Integer getViewPage() {

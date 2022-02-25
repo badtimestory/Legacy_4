@@ -31,6 +31,12 @@
   	  </c:forEach> 
     </table>
     
+    <div>
+    	<c:forEach begin="${pager.beginPagingNum}" end = "${pager.endPagingNum}" var="pagingNum">
+    		<a href="list?curPage=${pagingNum}">${pagingNum}</a>
+    	</c:forEach>
+    </div>
+    
     <a href="./add">ADD</a>
 </body>
 </html>
