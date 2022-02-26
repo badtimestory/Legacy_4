@@ -18,17 +18,16 @@
  	
  	<select id="total" parameterType="Pager" resultType="Integer">
 		SELECT COUNT(BOOKNUMBER) FROM BANKBOOK
- 		WHERE 
- 			BOOKNUMBER > 0 
-			AND 
-			<choose>
-				<when test="kind =='cal1'">
-					BOOKNAME
-				</when>
-				<otherwise>
-					BOOKCONTENTS
-				</otherwise>
-			</choose>
+		WHERE BOOKNUMBER > 0 
+		AND 
+		<choose>
+			<when test="kind == 'col1'">
+				BOOKNAME
+			</when>
+			<otherwise>
+				BOOKCONTENTS
+			</otherwise>
+		</choose>
 		LIKE '%' || #{search} || '%'
  	</select>
  

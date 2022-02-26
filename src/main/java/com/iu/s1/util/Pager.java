@@ -42,7 +42,7 @@ public class Pager {
 		int totalBlock = totalPage / perBlock;
 		
 		if(totalPage % perBlock != 0) {
-			++totalPage;
+			++totalBlock;
 		}
 		
 		// block 1번 : 1 ~ 10
@@ -88,6 +88,11 @@ public class Pager {
 		// 현재 블럭이 마지막 블럭과 같으면
 		if(curBlock == totalBlock) {
 			this.lastNum = totalPage;
+		}
+		
+		// 검색결과가 없어서 Total이 0일 때
+		if(totalCount == 0) {
+			this.lastNum = 0;
 		}
 		
 		
