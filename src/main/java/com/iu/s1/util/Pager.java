@@ -22,10 +22,8 @@ public class Pager {
 		this.endNum = this.getCurPage() * this.getPerPage();
 	}
 	
-	public void makeNum() {
-		
+	public void makeNum(int totalCount) {
 		// 전체 row 갯수
-		int totalCount = 400;
 		
 		// 전체 page 갯수 구하기
 		int totalPage = totalCount / this.getPerPage();

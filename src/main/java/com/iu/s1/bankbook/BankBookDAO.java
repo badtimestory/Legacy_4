@@ -39,4 +39,9 @@ public class BankBookDAO {
 	public int delete(BankBookDTO bankBookDTO) throws Exception {
 		return sqlSession.delete(NAMESPACE+"delete", bankBookDTO);
 	}
+	
+	// total
+	public int total(Pager pager) throws Exception {
+		return sqlSession.selectOne(NAMESPACE+"total", pager);
+	}
 }

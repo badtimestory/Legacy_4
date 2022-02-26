@@ -33,6 +33,10 @@
     </table>
     
     <div>
+    	<c:if test="${pager.curPage <= pager.perPage}">
+    	<span class="material-icons-outlined">navigate_before</span>
+    	</c:if>
+    
     	<c:if test="${pager.before}">
     		<a href="./list?curPage=${pager.startNum-1}"><span class="material-icons-outlined">
 			navigate_before
@@ -48,7 +52,6 @@
 			navigate_next
 			</span></a>
     	</c:if>
-		
     </div>
     
     <a href="./add">ADD</a>
