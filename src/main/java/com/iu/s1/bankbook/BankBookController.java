@@ -51,6 +51,7 @@ public class BankBookController {
 		// ModelAndView mv = new ModelAndView();
 		List<BankBookDTO> ar = bankBookService.list(pager);
 		mv.addObject("list", ar);
+		mv.addObject("pager", pager);
 		mv.setViewName("bankbook/list");
 		
 		return mv;

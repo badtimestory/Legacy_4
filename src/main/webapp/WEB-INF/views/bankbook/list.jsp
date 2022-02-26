@@ -10,8 +10,9 @@
 </head>
 <body>
 <c:import url="../template/header.jsp"></c:import>
+
+
   <h1>BankBook List page</h1>
-  <!-- <h1>${ list }</h1> -->
   
   <!-- bookName, bookRate, bookSale -->
     <table>
@@ -32,9 +33,22 @@
     </table>
     
     <div>
-    	<c:forEach begin="${pager.beginPagingNum}" end = "${pager.endPagingNum}" var="pagingNum">
-    		<a href="list?curPage=${pagingNum}">${pagingNum}</a>
-    	</c:forEach>
+    	<c:if test="${pager.before}">
+    		<a href="./list?curPage=${pager.startNum-1}"><span class="material-icons-outlined">
+			navigate_before
+			</span></a>
+    	</c:if>
+    
+ 		<c:forEach begin="${pager.startNum}" end="${pager.lastNum}" var="i">
+    		<a href="list?curPage=${i}">${i}</a>
+		</c:forEach>
+		
+		<c:if test="${pager.after}">
+    		<a href="./list?curPage=${pager.lastNum+1}"><span class="material-icons-outlined">
+			navigate_next
+			</span></a>
+    	</c:if>
+		
     </div>
     
     <a href="./add">ADD</a>
