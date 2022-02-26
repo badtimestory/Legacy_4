@@ -14,7 +14,22 @@
 
   <h1>BankBook List page</h1>
   
-  <!-- bookName, bookRate, bookSale -->
+	<!-- Search Bar-->
+	<div>
+		<form action="./list" method="GET">
+			<fieldset>
+				<select name="kind">
+					<option value="col1">제목</option>
+					<option value="col2">본문</option>
+				</select>
+				<!-- name element: "parameter name" -->
+				<!-- value element: "it defines the text" -->
+				<input type="text" name="search" value="${pager.search}">
+				<button type="submit">검색</button>
+			</fieldset>
+		</form>
+	</div>
+
     <table>
       <tr>
       	<th>상품번호</th>
@@ -44,7 +59,7 @@
     	</c:if>
     
  		<c:forEach begin="${pager.startNum}" end="${pager.lastNum}" var="i">
-    		<a href="list?curPage=${i}">${i}</a>
+    		<a href="list?curPage=${i}&kind=${pager.kind}&search=${pager.search}">${i}</a>
 		</c:forEach>
 		
 		<c:if test="${pager.after}">

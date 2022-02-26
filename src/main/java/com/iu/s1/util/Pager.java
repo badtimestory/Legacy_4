@@ -10,12 +10,15 @@ public class Pager {
 	// 끝 번호
 	private Integer endNum;
 	
-	// ----- JSP paging number -----
+	// ----- JSP paging Variable -----
 	private Integer startNum;
 	private Integer lastNum;
 	
 	private boolean before;
 	private boolean after;
+	
+	private String search;
+	private String kind;
 	
 	public void makeRow() {
 		this.beginNum = (this.getCurPage() - 1) * this.getPerPage() + 1;
@@ -39,7 +42,7 @@ public class Pager {
 		int totalBlock = totalPage / perBlock;
 		
 		if(totalPage % perBlock != 0) {
-			totalPage++;
+			++totalPage;
 		}
 		
 		// block 1번 : 1 ~ 10
@@ -163,6 +166,24 @@ public class Pager {
 	public void setAfter(boolean after) {
 		this.after = after;
 	}
-	
-	
+
+	public String getSearch() {
+		
+		if(this.search == null)
+			this.search = "";
+		
+		return search;
+	}
+
+	public void setSearch(String search) {
+		this.search = search;
+	}
+
+	public String getKind() {
+		return kind;
+	}
+
+	public void setKind(String kind) {
+		this.kind = kind;
+	}
 }

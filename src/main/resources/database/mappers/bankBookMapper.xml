@@ -16,14 +16,39 @@
  		SELECT * FROM BANKBOOK WHERE BOOKNUMBER = #{bookNumber}
  	</select>
  	
- 	<select id="total" resultType="Integer">
- 		SELECT COUNT(BOOKNUMBER) FROM BANKBOOK
+ 	<select id="total" parameterType="Pager" resultType="Integer">
+		SELECT COUNT(BOOKNUMBER) FROM BANKBOOK
+ 		WHERE 
+ 			BOOKNUMBER > 0 
+			AND 
+			<choose>
+				<when test="kind =='cal1'">
+					BOOKNAME
+				</when>
+				<otherwise>
+					BOOKCONTENTS
+				</otherwise>
+			</choose>
+		LIKE '%' || #{search} || '%'
  	</select>
  
  	<select id="list" parameterType="Pager" resultType="BankBookDTO">
 		SELECT * FROM 
-		(SELECT ROWNUM R, B.* FROM
-		(SELECT * FROM BANKBOOK WHERE BOOKNUMBER > 0 ORDER BY BOOKNUMBER DESC) B)
+			(SELECT ROWNUM R, B.* FROM
+				(SELECT * FROM BANKBOOK WHERE BOOKNUMBER > 0 
+				AND 
+				<choose>
+					<when test="kind == 'col1'">
+						BOOKNAME
+					</when>
+					<otherwise>
+						BOOKCONTENTS
+					</otherwise>
+				</choose>
+				LIKE '%' || #{search} || '%'
+				ORDER BY BOOKNUMBER DESC
+				) 
+			B)
 		WHERE R BETWEEN #{beginNum} AND #{endNum} 	
  	</select>
  	
