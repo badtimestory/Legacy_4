@@ -10,7 +10,7 @@ checkAll.addEventListener('click', function() {
 
 // 전부 동의체크하면 전체동의에 체크
 for(ch of check) {
-  ch.addEventListener("click", function() {
+  ch.addEventListener('click', function() {
     let final = true;
 
     // 체크가 다되있으면 if문에 안들어옴
@@ -19,10 +19,32 @@ for(ch of check) {
         final = false;
       }
     }
-
     checkAll.checked=final;
-
   });
 }
 
+const btn = document.getElementById('btn');
 
+// 전체 약관에 동의하면 로그인 폼으로 이동
+btn.addEventListener('click', function() {
+  // let c = true;
+
+  // for(ch of check){
+  //   if(!ch.checked){
+  //     c = false;
+  //   }
+  // }
+
+  // if(c){
+  //   location.href="./join";
+  // } else {
+  //   alert("약관에 동의가 필요합니다")
+  // }
+
+  if(checkAll.checked){
+    location.href="./join";
+  } else {
+    alert("약관에 동의가 필요합니다")
+  }
+
+});
