@@ -38,5 +38,13 @@ public class QnaController {
 		
 		return "redirect:./list";
 	}
+	
+	// detail
+	@RequestMapping(value = "detail", method = RequestMethod.GET)
+	public void detail(QnaDTO qnaDTO, Model model) throws Exception {
+		qnaDTO = qnaService.detail(qnaDTO);
+		model.addAttribute("dto", qnaDTO);
+		
+	}
 
 }

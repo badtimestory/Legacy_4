@@ -45,5 +45,14 @@ public class QnaDAOTest extends MyjuintTest {
 		}
 		System.out.println("insert Finish");
 	}
+	
+	// detail
+	@Test
+	public void detailTest() throws Exception {
+		QnaDTO qnaDTO = new QnaDTO();
+		qnaDTO.setNum(100L);
+		qnaDTO = qnaDAO.detail(qnaDTO);
+		assertNotNull(qnaDTO);
+	}
 
 }

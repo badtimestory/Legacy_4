@@ -22,4 +22,10 @@ public class QnaDAO {
 	public int add(QnaDTO qnaDTO) throws Exception {
 		return sqlSession.insert(NAMESPACE+"add", qnaDTO);
 	}
+	
+	// add
+	public QnaDTO detail(QnaDTO qnaDTO) throws Exception {
+		return sqlSession.selectOne(NAMESPACE+"detail", qnaDTO);
+		
+	}
 }

@@ -22,4 +22,9 @@ public class QnaService {
 	public int add(QnaDTO qnaDTO) throws Exception {
 		return qnaDAO.add(qnaDTO);
 	}
+	
+	// detail
+	public QnaDTO detail(QnaDTO qnaDTO) throws Exception {
+		return qnaDAO.detail(qnaDTO);
+	}
 }

@@ -12,7 +12,11 @@
  <insert id="add" parameterType="QnaDTO">
 	INSERT INTO QNA (NUM, TITLE, CONTENTS, WRITER, REGDATE, HIT, REF, STEP, DEPTH)
 	VALUES (QNA_SEQ.NEXTVAL, #{title}, #{contents}, #{writer}, SYSDATE, 0, 0, 0, 0)
- </insert> 
+ </insert>
+ 
+ <select id="detail" resultType="QnaDTO">
+ 	SELECT * FROM QNA WHERE NUM = #{num}
+ </select>
  
  </mapper>
  
