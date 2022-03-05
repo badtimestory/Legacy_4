@@ -47,7 +47,7 @@ public class QnaDAOTest extends MyjuintTest {
 	}
 	
 	// detail
-	@Test
+	// @Test
 	public void detailTest() throws Exception {
 		QnaDTO qnaDTO = new QnaDTO();
 		qnaDTO.setNum(100L);

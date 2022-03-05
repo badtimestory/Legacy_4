@@ -27,4 +27,9 @@ public class QnaService {
 	public QnaDTO detail(QnaDTO qnaDTO) throws Exception {
 		return qnaDAO.detail(qnaDTO);
 	}
+	
+	// update
+	public int update(QnaDTO qnaDTO) throws Exception {
+		return qnaDAO.update(qnaDTO);
+	}
 }

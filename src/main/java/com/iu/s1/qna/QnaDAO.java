@@ -28,4 +28,9 @@ public class QnaDAO {
 		return sqlSession.selectOne(NAMESPACE+"detail", qnaDTO);
 		
 	}
+	
+	// update
+	public int update(QnaDTO qnaDTO) throws Exception {
+		return sqlSession.update(NAMESPACE+"update", qnaDTO);
+	}
 }

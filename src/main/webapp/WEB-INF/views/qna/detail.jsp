@@ -17,5 +17,7 @@
   <h3>Ref: ${dto.ref}</h3>
   <h3>Step: ${dto.step}</h3>
   <h3>Depth: ${dto.depth}</h3>
+
+  <a href="./update?num=${dto.num}">수정</a>
 </body>
 </html>

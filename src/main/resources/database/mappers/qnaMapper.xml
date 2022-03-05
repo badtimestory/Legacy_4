@@ -18,5 +18,9 @@
  	SELECT * FROM QNA WHERE NUM = #{num}
  </select>
  
+ <update id="update" parameterType="QnaDTO">
+ 	UPDATE QNA SET TITLE = #{title}, CONTENTS = #{contents}, REGDATE = SYSDATE WHERE NUM = #{num}
+ </update>
+ 
  </mapper>
  

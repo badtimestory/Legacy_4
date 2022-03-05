@@ -44,7 +44,23 @@ public class QnaController {
 	public void detail(QnaDTO qnaDTO, Model model) throws Exception {
 		qnaDTO = qnaService.detail(qnaDTO);
 		model.addAttribute("dto", qnaDTO);
+	}
+	
+	// update get
+	@RequestMapping(value = "update", method = RequestMethod.GET)
+	public String update(QnaDTO qnaDTO, Model model) throws Exception {
+		qnaDTO = qnaService.detail(qnaDTO);
+		model.addAttribute("dto", qnaDTO);
 		
+		return "qna/update";
+	}
+	
+	// update post
+	@RequestMapping(value = "update", method = RequestMethod.POST)
+	public String update(QnaDTO qnaDTO) throws Exception {
+		int result = qnaService.update(qnaDTO);
+		
+		return "redirect:./list";
 	}
 
 }
