@@ -17,4 +17,9 @@ public class QnaDAO {
 	public List<QnaDTO> list() throws Exception {
 		return sqlSession.selectList(NAMESPACE+"list");
 	}
+	
+	// insert
+	public int add(QnaDTO qnaDTO) throws Exception {
+		return sqlSession.insert(NAMESPACE+"add", qnaDTO);
+	}
 }

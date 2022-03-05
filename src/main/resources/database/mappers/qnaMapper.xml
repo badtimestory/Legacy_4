@@ -6,9 +6,13 @@
  <mapper namespace="com.iu.s1.qna.QnaDAO">
  
  <select id="list" resultType="QnaDTO">
-	 SELECT * FROM QNA
+	 SELECT * FROM QNA ORDER BY NUM DESC
  </select>
  
+ <insert id="add" parameterType="QnaDTO">
+	INSERT INTO QNA (NUM, TITLE, CONTENTS, WRITER, REGDATE, HIT, REF, STEP, DEPTH)
+	VALUES (QNA_SEQ.NEXTVAL, #{title}, #{contents}, #{writer}, SYSDATE, 0, 0, 0, 0)
+ </insert> 
  
  </mapper>
  

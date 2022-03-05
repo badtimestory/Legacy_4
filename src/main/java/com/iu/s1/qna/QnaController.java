@@ -24,5 +24,19 @@ public class QnaController {
 		
 		return "qna/list";
 	}
+	
+	// add get
+	@RequestMapping(value = "add", method = RequestMethod.GET)
+	public void add() throws Exception {
+		
+	}
+	
+	// add post
+	@RequestMapping(value = "add", method = RequestMethod.POST)
+	public String add(QnaDTO qnaDTO) throws Exception {
+		int result = qnaService.add(qnaDTO);
+		
+		return "redirect:./list";
+	}
 
 }

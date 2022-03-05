@@ -31,7 +31,7 @@
         <c:forEach items="${list}" var="qna">
           <tr>
             <td>${qna.num}</td>
-            <td>${qna.title}</td>
+            <td><a href="./qna/detail?num=${qna.num}">${qna.title}</a></td>
             <td>${qna.contents}</td>
             <td>${qna.writer}</td>
             <td>${qna.regDate}</td>
@@ -42,6 +42,7 @@
           </tr>
         </c:forEach>
       </table>
+      <a href="./add">글쓰기</a>
   </div>
 </body>
 </html>

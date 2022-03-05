@@ -17,4 +17,9 @@ public class QnaService {
 		
 		return ar;
 	}
+	
+	// add
+	public int add(QnaDTO qnaDTO) throws Exception {
+		return qnaDAO.add(qnaDTO);
+	}
 }
