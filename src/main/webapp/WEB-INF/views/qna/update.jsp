@@ -8,7 +8,6 @@
 </head>
 <body>
   <h1>QnA Update Test Page</h1>
-
   <form action="./update" method="post">
     <!-- PK라 무조건 보내줘야함-->
     <input type="hidden" name="num" readonly="readonly" value="${dto.num}">

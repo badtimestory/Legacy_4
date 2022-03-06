@@ -10,6 +10,7 @@ import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.iu.s1.MyjuintTest;
+import com.iu.s1.util.Pager;
 
 public class QnaDAOTest extends MyjuintTest {
 	
@@ -23,15 +24,15 @@ public class QnaDAOTest extends MyjuintTest {
 	
 	// list 
 	// @Test
-	public void list() throws Exception {
-		List<QnaDTO> ar = qnaDAO.list();
+	public void list(Pager pager) throws Exception {
+		List<QnaDTO> ar = qnaDAO.list(pager);
 		assertNotEquals(0, ar.size());
 	}
 	
 	// add
 	// @Test
 	public void add() throws Exception {
-		for (int i = 0; i < 100; i++) {
+		for (int i = 100; i < 200; i++) {
 			QnaDTO qnaDTO = new QnaDTO();
 			qnaDTO.setTitle("testcase"+ i);
 			qnaDTO.setContents("testcontent" + i);
