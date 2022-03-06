@@ -14,6 +14,19 @@
   <c:import url="../template/header.jsp"></c:import>
   <div class="table-container">
     <h1 class="title">QnA List Test Page</h1>
+    <div>
+      <form action="./list" method="get">
+        <fieldset>
+          <select name="kind">
+              <option value="col1">제목</option>
+              <option value="col2">본문</option>
+              <option value="col3">작성자</option>
+          </select>
+          <input type="text" name="search" value="${pager.search}">
+          <button type="submit">검색</button>
+        </fieldset>
+      </form>
+    </div>
       <table class="table-basic">
         <tr>
           <th>NUM</th>
