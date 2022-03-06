@@ -33,4 +33,9 @@ public class QnaDAO {
 	public int update(QnaDTO qnaDTO) throws Exception {
 		return sqlSession.update(NAMESPACE+"update", qnaDTO);
 	}
+	
+	// delete
+	public int delete(QnaDTO qnaDTO) throws Exception {
+		return sqlSession.delete(NAMESPACE+"delete", qnaDTO);
+	}
 }

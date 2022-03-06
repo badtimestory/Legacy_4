@@ -19,5 +19,6 @@
   <h3>Depth: ${dto.depth}</h3>
 
   <a href="./update?num=${dto.num}">수정</a>
+  <a href="./delete?num=${dto.num}">삭제</a>
 </body>
 </html>

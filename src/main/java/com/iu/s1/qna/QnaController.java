@@ -62,5 +62,13 @@ public class QnaController {
 		
 		return "redirect:./list";
 	}
+	
+	// delete
+	@RequestMapping(value = "delete", method = RequestMethod.GET)
+	public String delete(QnaDTO qnaDTO) throws Exception {
+		int result = qnaService.delete(qnaDTO);
+		
+		return "redirect:./list";
+	}
 
 }

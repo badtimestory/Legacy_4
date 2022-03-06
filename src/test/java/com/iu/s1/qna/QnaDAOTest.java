@@ -54,5 +54,14 @@ public class QnaDAOTest extends MyjuintTest {
 		qnaDTO = qnaDAO.detail(qnaDTO);
 		assertNotNull(qnaDTO);
 	}
+	
+	// delete
+	// @Test
+	public void deleteTest() throws Exception {
+		QnaDTO qnaDTO = new QnaDTO();
+		qnaDTO.setNum(99L);
+		int result = qnaDAO.delete(qnaDTO);
+		assertEquals(1, result);
+	}
 
 }

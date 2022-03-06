@@ -22,5 +22,9 @@
  	UPDATE QNA SET TITLE = #{title}, CONTENTS = #{contents}, REGDATE = SYSDATE WHERE NUM = #{num}
  </update>
  
+ <delete id="delete" parameterType="QnaDTO">
+ 	DELETE FROM QNA WHERE NUM = #{num}
+ </delete>
+ 
  </mapper>
  
