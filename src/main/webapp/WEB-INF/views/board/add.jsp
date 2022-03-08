@@ -8,16 +8,16 @@
 </head>
 <body>
   <h1>${board} add Page</h1>
-  
   <!-- form 태그를 이용해 server로 요청을 보냄 -->
   <form action="./add" method="POST">
-    <input type="text" name="title" placeholder="title">
-    <textarea name="contents" placeholder="contents"></textarea>
-    <input type="text" name="writer" placeholder="writer">
+    <input type="text" name="title" id="title" placeholder="title">
+    <input type="text" name="writer" id="writer" placeholder="writer">
+    <textarea name="contents" id="contents" placeholder="contents"></textarea>
     <input type="submit" value="Add">
     <div>
     <a href="./list">뒤로 가기</a>
     </div>
   </form>
+  <script type="text/javascript" src="../resources/js/add.js"></script>
 </body>
 </html>
