@@ -20,7 +20,6 @@
  		SELECT COUNT(BOOKNUMBER) FROM BANKBOOK
  		WHERE BOOKNUMBER > 0 
 		AND 
-		
 		<choose>
 			<when test="kind =='cal1'">
 				BOOKNAME
@@ -28,8 +27,7 @@
 			<otherwise>
 				BOOKCONTENTS
 			</otherwise>
-		</choose>
-		
+		</choose>	
 		LIKE '%' || #{search} || '%' 
  	</select>
  

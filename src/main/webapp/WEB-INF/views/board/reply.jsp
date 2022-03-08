@@ -7,23 +7,18 @@
 <title>Insert title here</title>
 </head>
 <body>
-  <h1>Test add Page</h1>
+  <h1>${board} Reply Page</h1>
   
   <!-- form 태그를 이용해 server로 요청을 보냄 -->
-  <form action="./add" method="POST">
+  <form action="./reply" method="POST">
+  	<input type="hidden" name="num" value="${dto.num}">
     <input type="text" name="title" placeholder="title">
-    <textarea name="contents" placeholder="contents"></textarea>
     <input type="text" name="writer" placeholder="writer">
-    <input type="number" name="hit" placeholder="hit">
-    
-    <input type="submit" value="Add">
-    
+    <textarea name="contents" placeholder="contents"></textarea>
+    <button type="submit">reply</button>
     <div>
     <a href="./list">뒤로 가기</a>
     </div>
-    
-    
-  
   </form>
 </body>
 </html>

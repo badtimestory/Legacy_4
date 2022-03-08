@@ -1,18 +1,20 @@
-package com.iu.s1.notice;
+package com.iu.s1.board;
 
-public class NoticeDTO {
+import java.sql.Date;
 
-	private Integer num;
+public class BoardDTO {
+	
+	private Long num;
 	private String title;
 	private String contents;
 	private String writer;
-	private String regDate;
-	private Integer hit;
+	private Date regDate;
+	private Long hit;
 	
-	public Integer getNum() {
+	public Long getNum() {
 		return num;
 	}
-	public void setNum(Integer num) {
+	public void setNum(Long num) {
 		this.num = num;
 	}
 	public String getTitle() {
@@ -33,18 +35,18 @@ public class NoticeDTO {
 	public void setWriter(String writer) {
 		this.writer = writer;
 	}
-	public String getRegDate() {
+	public Date getRegDate() {
 		return regDate;
 	}
-	public void setRegDate(String regDate) {
+	public void setRegDate(Date regDate) {
 		this.regDate = regDate;
 	}
-	public Integer getHit() {
+	public Long getHit() {
 		return hit;
 	}
-	public void setHit(Integer hit) {
+	public void setHit(Long hit) {
 		this.hit = hit;
 	}
 	
-	
+
 }
