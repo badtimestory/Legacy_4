@@ -9,7 +9,7 @@
 <body>
   <h1>Join Page</h1>
   <div>
-    <form action="./join" method="post" id="frm">
+    <form action="./join" method="post" id="frm" enctype="multipart/form-data">
   	  <fieldset>
   	    <legend>ID</legend>
   	  	<input type="text" name="id" id="id">
@@ -31,19 +31,25 @@
   	  <fieldset>
   	  	<legend>Name</legend>
   	  	<input type="text" name="name" id="name">
-				<span id="nameResult"></span>
+		<span id="nameResult"></span>
   	  </fieldset>
   	  
   	  <fieldset>
   	  	<legend>Phone</legend>
   	  	<input type="text" name="phone" id="phone">
-				<span id="phoneResult"></span>
+		<span id="phoneResult"></span>
   	  </fieldset>
   	  
   	  <fieldset>
   	  	<legend>Email</legend>
   	  	<input type="text" name="email" id="email">
-				<span id="emailResult"></span>
+		<span id="emailResult"></span>
+  	  </fieldset>
+  	  
+  	  <fieldset>
+  	  	<legend>Photo</legend>
+  	  	<input type="file" name="photo" id="photo">
+		<span id="photoResult"></span>
   	  </fieldset>
   	  
   	  <fieldset>

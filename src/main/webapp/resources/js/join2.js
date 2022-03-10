@@ -1,4 +1,4 @@
-// ID, PW, NAME< CMAIL, PHONE
+// ID, PW, NAME, EMAIL, PHONE
 const id = document.getElementById('id');
 const idResult = document.getElementById('idResult');
 const pw = document.getElementById('pw');
@@ -99,7 +99,7 @@ btn.addEventListener('click', function() {
     return;
   }
 
-  frm.onsubmit();
+  frm.submit();
 
 });
 

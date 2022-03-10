@@ -13,6 +13,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
@@ -24,9 +25,11 @@ public class MemberController {
 	
 	// insert
 	@RequestMapping(value = "join", method = RequestMethod.POST)
-	public String join(MemberDTO memberDTO) throws Exception {
-		
-		int result = memberService.join(memberDTO);
+	public String join(MemberDTO memberDTO, MultipartFile photo) throws Exception{
+//		System.out.println(photo.getOriginalFilename());
+//		System.out.println(photo.getSize());//byte
+	
+		int result = memberService.join(memberDTO, photo);
 		
 		return "redirect:../";
 	}
@@ -44,10 +47,7 @@ public class MemberController {
 	// login
 	@RequestMapping(value = "login", method = RequestMethod.POST)
 	// parameter는 전부 String type 
-	public String login(HttpSession session, MemberDTO memberDTO, String remember, Model model, HttpServletResponse response) throws Exception {
-		
-		System.out.println("Remember: " + remember);
-		
+	public String login(HttpSession session, MemberDTO memberDTO, String remember, Model model, HttpServletResponse response) throws Exception {		
 		// 서버에서 쿠키 생성
 		if(remember != null && remember.equals("1")) {	// check하면 1 아니면 null
 			// cookie 생성, id를 저장

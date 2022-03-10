@@ -13,5 +13,6 @@
 	<h3>${dto.name}</h3>
 	<h3>${dto.phone}</h3>
 	<h3>${dto.email}</h3>
+	<!-- <img alt="" src="파일경로명/파일명"> -->
 </body>
 </html>

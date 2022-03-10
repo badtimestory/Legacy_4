@@ -10,6 +10,9 @@
 </head>
 <body>
 	<c:import url="./template/header.jsp"></c:import>
+	<div>
+	  <img alt="sad" src="./resources/images/sad.jpg">
+	</div>
 	
 	<h1>Index Page</h1>
 	
