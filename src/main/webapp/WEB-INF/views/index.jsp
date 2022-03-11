@@ -11,7 +11,7 @@
 <body>
 	<c:import url="./template/header.jsp"></c:import>
 	<div>
-	  <img alt="sad" src="./resources/images/sad.jpg">
+	  <img alt="cute" src="./resources/images/cute.webp">
 	</div>
 	
 	<h1>Index Page</h1>
@@ -33,5 +33,7 @@
 			<a href="./member/join">Join</a>
 		</c:if>
 	</div>
+	
+	<img alt="pepe" src="./resources/upload/member/7e53b62b-a5dc-4744-b53a-70e86b6bd2d5_270F6B3A567D7EA706.jfif">
 </body>
 </html>

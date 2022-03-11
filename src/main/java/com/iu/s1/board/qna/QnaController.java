@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.iu.s1.board.BoardDTO;
 import com.iu.s1.util.Pager;
@@ -55,9 +56,9 @@ public class QnaController {
 	
 	// add post
 	@RequestMapping(value = "add", method = RequestMethod.POST)
-	public String add(QnaDTO qnaDTO) throws Exception {
+	public String add(QnaDTO qnaDTO, MultipartFile[] files) throws Exception {
 		
-		int result = qnaService.add(qnaDTO);
+		int result = qnaService.add(qnaDTO, files);
 		
 		return "redirect:./list";
 	}

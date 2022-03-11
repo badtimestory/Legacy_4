@@ -16,9 +16,36 @@
  		WHERE ID = #{id} AND PW = #{pw}
  	</select>
  	
- 	<select id="mypage" parameterType="MemberDTO" resultType="MemberDTO">
- 		SELECT ID, NAME, EMAIL, PHONE FROM MEMBER
+ 	<select id="mypage" parameterType="MemberDTO" resultType="MemberDTO" resultMap="mypageResult">
+ 		SELECT ID, M.NAME, M.EMAIL, M.PHONE, MF.FILENUM, MF.FILENAME, MF.ORINAME 
+ 		FROM 
+ 			MEMBER M
+ 				LEFT JOIN
+ 			MEMBERFILE MF
+ 			USING(ID)
  		WHERE ID = #{id}
  	</select>
+ 	
+ 	<resultMap type="MemberDTO" id="mypageResult">
+ 		<!-- Primary Key -->
+ 		<id column="id" property="id"/> <!-- property는 MemberFileDTO의 멤버변수명 -->
+ 		<!-- PK를 제외한 나머지 -->
+ 		<result column="name" property="name"/> <!-- column은 Table Column명 -->
+ 		<result column="email" property="email"/>
+ 		<result column="phone" property="phone"/>
+ 		<!-- 1:1 일 때 -->
+ 		<association property="memberFileDTO" javaType="com.iu.s1.member.MemberFileDTO">
+ 			<id column="fileNum" property="fileNum"/>
+ 			<result column="fileName" property="fileName"/>
+ 			<result column="oriName" property="oriName"/>
+ 		</association>
+ 		<!-- 1:N 일 때-->
+ 		<!-- <collection property=""></collection> -->
+ 	</resultMap>
+ 	
+ 	<insert id="addFile" parameterType="MemberFileDTO">
+ 		INSERT INTO MEMBERFILE (FILENUM, ID, FILENAME, ORINAME)
+ 		VALUES (FILE_SEQ.NEXTVAL, #{id}, #{fileName}, #{oriName})
+ 	</insert>
  	
  </mapper>

@@ -26,8 +26,8 @@ public class MemberController {
 	// insert
 	@RequestMapping(value = "join", method = RequestMethod.POST)
 	public String join(MemberDTO memberDTO, MultipartFile photo) throws Exception{
-//		System.out.println(photo.getOriginalFilename());
-//		System.out.println(photo.getSize());//byte
+		System.out.println(photo.getOriginalFilename());
+		System.out.println(photo.getSize());//byte
 	
 		int result = memberService.join(memberDTO, photo);
 		
@@ -116,7 +116,7 @@ public class MemberController {
 //		ModelAndView mv = new ModelAndView();
 //		MemberDTO memberDTO = (MemberDTO)session.getAttribute("member");
 //		memberDTO = memberService.mypage(memberDTO);
-		// jsp의 경로며
+		// jsp의 경로명
 //		mv.setViewName("member/mypage");
 //		mv.addObject("dto", memberDTO);
 //		return mv;

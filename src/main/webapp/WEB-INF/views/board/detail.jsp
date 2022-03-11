@@ -17,6 +17,11 @@
   <h3>WRITER: ${dto.writer} </h3>
   <h3>REGDATE: ${dto.regDate}</h3>
   <h3>HIT: ${dto.hit}</h3>
+  <div>
+    <c:forEach items="${dto.fileDTOs}" var="f">
+    	<a href="../resources/upload/${board}/${f.fileName}">${f.oriName}</a>
+    </c:forEach>
+  </div>
 </body>
   <a href="./list">BACK</a>
   <a href="./update?num=${dto.num}">수정</a>

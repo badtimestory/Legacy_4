@@ -53,10 +53,12 @@
   	  </fieldset>
   	  
   	  <fieldset>
-  	  	<button type="button" id="btn">JOIN</button>
+  	  	<!-- 최종완성시 사용 -->
+  	  	<!-- <button type="button" id="btn">JOIN</button> -->
+  	  	<button type="submit" id="btn">JOIN</button>
   	  </fieldset>
   	  
-  	  <script type="text/javascript" src="../resources/js/join2.js"></script>
+  	  <!-- <script type="text/javascript" src="../resources/js/join2.js"></script> -->
     </form>
   </div>
 </body>
