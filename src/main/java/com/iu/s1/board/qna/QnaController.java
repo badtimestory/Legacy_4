@@ -9,8 +9,10 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.iu.s1.board.BoardDTO;
+import com.iu.s1.board.notice.NoticeFileDTO;
 import com.iu.s1.util.Pager;
 
 @Controller
@@ -23,6 +25,17 @@ public class QnaController {
 	@ModelAttribute("board")
 	public String board() {
 		return "qna";
+	}
+	
+	@RequestMapping(value = "fileDown", method = RequestMethod.GET)
+	public ModelAndView fileDown(QnaFileDTO qnaFileDTO) throws Exception {
+		ModelAndView mv = new ModelAndView();
+		qnaFileDTO = qnaService.detailFile(qnaFileDTO);
+		
+		mv.setViewName("fileDown");
+		mv.addObject("file", qnaFileDTO);
+		
+		return mv;
 	}
 	
 	// list

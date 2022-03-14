@@ -9,6 +9,7 @@ import org.springframework.web.multipart.MultipartFile;
 import com.iu.s1.board.BoardDTO;
 import com.iu.s1.board.BoardFileDTO;
 import com.iu.s1.board.BoardService;
+import com.iu.s1.board.notice.NoticeFileDTO;
 import com.iu.s1.util.FileManager;
 import com.iu.s1.util.Pager;
 
@@ -46,7 +47,7 @@ public class QnaService implements BoardService {
 				continue;
 			}
 			
-			String fileName = fileManager.save(files[i], "resource/upload/qna/");
+			String fileName = fileManager.save(files[i], "resources/upload/qna/");
 			
 			// 2. DB에 저장
 			QnaFileDTO qnaFileDTO = new QnaFileDTO();
@@ -55,6 +56,7 @@ public class QnaService implements BoardService {
 			qnaFileDTO.setOriName(files[i].getOriginalFilename());
 			result = qnaDAO.addFile(qnaFileDTO);
 		}
+		
 		return result;
 	}
 
@@ -100,6 +102,10 @@ public class QnaService implements BoardService {
 		
 		return result;
 		
+	}
+	
+	public QnaFileDTO detailFile(QnaFileDTO qnaFileDTO) throws Exception {
+		return qnaDAO.detailFile(qnaFileDTO);
 	}
 
 }

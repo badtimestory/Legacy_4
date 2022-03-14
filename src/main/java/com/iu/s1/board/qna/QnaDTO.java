@@ -36,20 +36,5 @@ public class QnaDTO extends BoardDTO {
 	}
 	public void setFileDTOs(List<QnaDTO> fileDTOs) {
 		this.fileDTOs = fileDTOs;
-	}
-	
-	
-//	public List<QnaDTO> getQnaDTOs() {
-//		return qnaDTOs;
-//	}
-//	public void setQnaDTOs(List<QnaDTO> qnaDTOs) {
-//		this.qnaDTOs = qnaDTOs;
-//	}
-	
-
-	
-	
-	
-	
-	
+	}	
 }
