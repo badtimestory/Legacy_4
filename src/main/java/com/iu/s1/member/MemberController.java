@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.CookieValue;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.multipart.MultipartFile;
@@ -22,6 +23,27 @@ public class MemberController {
 	
 	@Autowired
 	private MemberService memberService;
+	
+	// mv.addObject("board", "member")
+	@ModelAttribute("board")
+	public String getBoard() {
+		return "member";
+	}
+	
+	
+	// fileDown
+	@RequestMapping(value = "photoDown", method = RequestMethod.GET)
+	public ModelAndView fileDown(MemberFileDTO memberFileDTO) throws Exception {
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("fileDown");
+		
+		memberFileDTO = memberService.detailFile(memberFileDTO);
+		
+		mv.addObject("file", memberFileDTO);
+		
+		return mv;
+		
+	}
 	
 	// insert
 	@RequestMapping(value = "join", method = RequestMethod.POST)

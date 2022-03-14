@@ -1,36 +1,19 @@
 package com.iu.s1.board;
 
-public class BoardFileDTO {
-	private Long fileNum;
-	private Long num;
-	private String fileName;
-	private String oriName;
+import com.iu.s1.file.FileDTO;
+
+public class BoardFileDTO extends FileDTO {
 	
-	public Long getFileNum() {
-		return fileNum;
-	}
-	public void setFileNum(Long fileNum) {
-		this.fileNum = fileNum;
-	}
+	private Long num;
+
 	public Long getNum() {
 		return num;
 	}
+
 	public void setNum(Long num) {
 		this.num = num;
 	}
-	public String getFileName() {
-		return fileName;
-	}
-	public void setFileName(String fileName) {
-		this.fileName = fileName;
-	}
-	public String getOriName() {
-		return oriName;
-	}
-	public void setOriName(String oriName) {
-		this.oriName = oriName;
-	}
 	
 	
-
+	
 }

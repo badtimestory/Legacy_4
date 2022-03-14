@@ -5,6 +5,11 @@
     
  <mapper namespace="com.iu.s1.member.MemberDAO">
  
+ 	<select id="detailFile" parameterType="MemberFileDTO" resultType="MemberFileDTO">
+ 		SELECT * FROM MEMBERFILE
+ 		WHERE FILENUM = #{fileNum}
+ 	</select>
+ 
  	<insert id="join" parameterType="MemberDTO">
  		INSERT INTO MEMBER (ID, PW, NAME, PHONE, EMAIL)
 		VALUES(#{id}, #{pw}, #{name}, #{phone}, #{email})

@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.iu.s1.board.BoardDTO;
+import com.iu.s1.board.BoardFileDTO;
 import com.iu.s1.board.BoardService;
 import com.iu.s1.util.FileManager;
 import com.iu.s1.util.Pager;
@@ -59,6 +60,10 @@ public class NoticeService implements BoardService {
 		}
 
 		return result;
+	}
+	
+	public NoticeFileDTO detailFile(NoticeFileDTO noticeFileDTO) throws Exception {
+		return noticeDAO.detailFile(noticeFileDTO);
 	}
 		
 

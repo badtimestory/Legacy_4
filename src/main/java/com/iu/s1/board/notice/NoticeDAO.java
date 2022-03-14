@@ -46,6 +46,9 @@ public class NoticeDAO implements BoardDAO{
 	public int addFile(BoardFileDTO boardFileDTO) throws Exception {
 		return sqlSession.insert(NAMESPACE+"addFile", boardFileDTO);
 	}
-	
+
+	public NoticeFileDTO detailFile(NoticeFileDTO noticeFileDTO) throws Exception {
+		return sqlSession.selectOne(NAMESPACE+"detailFile", noticeFileDTO);
+	}
 	
 }

@@ -30,13 +30,15 @@ public class MemberService {
 		return result;	// memberDAO.join(memberDTO);
 	}
 	
+	public MemberFileDTO detailFile(MemberFileDTO memberFileDTO) throws Exception {
+		return memberDAO.detailFile(memberFileDTO);
+	}
+	
 	public MemberDTO login(MemberDTO memberDTO) throws Exception {
-		
 		return memberDAO.login(memberDTO);
 	}
 
 	public MemberDTO mypage(MemberDTO memberDTO) throws Exception {
-		
 		return memberDAO.mypage(memberDTO);
 		
 	}

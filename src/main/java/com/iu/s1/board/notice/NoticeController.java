@@ -13,6 +13,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.iu.s1.board.BoardDTO;
 import com.iu.s1.board.qna.QnaService;
+import com.iu.s1.util.FileDown;
 import com.iu.s1.util.Pager;
 
 @Controller
@@ -25,6 +26,17 @@ public class NoticeController {
 	@ModelAttribute("board")
 	public String board() {
 		return "notice";
+	}
+	
+	@RequestMapping(value = "fileDown", method = RequestMethod.GET)
+	public ModelAndView fileDown(NoticeFileDTO noticeFileDTO) throws Exception {
+		ModelAndView mv = new ModelAndView();
+		noticeFileDTO = noticeService.detailFile(noticeFileDTO);
+		
+		mv.setViewName("fileDown");
+		mv.addObject("file", noticeFileDTO);
+		
+		return mv;
 	}
 	
 	// list

@@ -28,4 +28,8 @@ public class MemberDAO {
 		return sqlSession.insert(NAMESPACE+"addFile", memberFileDTO);
 	}
 	
+	public MemberFileDTO detailFile(MemberFileDTO memberFileDTO) throws Exception {
+		return sqlSession.selectOne(NAMESPACE+"detailFile", memberFileDTO);
+	}
+	
 }

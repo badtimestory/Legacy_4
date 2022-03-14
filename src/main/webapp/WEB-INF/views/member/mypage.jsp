@@ -9,11 +9,12 @@
 <body>
 	<h1>My Page Test</h1>
 	
-	<h3>${dto.id}</h3>
-	<h3>${dto.name}</h3>
-	<h3>${dto.phone}</h3>
-	<h3>${dto.email}</h3>
+	<h3>ID : ${dto.id}</h3>
+	<h3>Name : ${dto.name}</h3>
+	<h3>Phone : ${dto.phone}</h3>
+	<h3>Email : ${dto.email}</h3>
 	<img alt="image" src="../resources/upload/member/${dto.memberFileDTO.fileName}">
-	<h3>${dto.memberFileDTO.oriName}</h3>
+	<a href="./photoDown?fileNum=${dto.memberFileDTO.fileNum}">${dto.memberFileDTO.oriName}</a>
+	<h3>Original ImageName : ${dto.memberFileDTO.oriName}</h3>
 </body>
 </html>
