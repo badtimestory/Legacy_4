@@ -51,4 +51,8 @@ public class NoticeDAO implements BoardDAO{
 		return sqlSession.selectOne(NAMESPACE+"detailFile", noticeFileDTO);
 	}
 	
+	public List<NoticeFileDTO> listFile(BoardDTO boardDTO) throws Exception {
+		return sqlSession.selectList(NAMESPACE+"listFile", boardDTO);
+	}
+	
 }

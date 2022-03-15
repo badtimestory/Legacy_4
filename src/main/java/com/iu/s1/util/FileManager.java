@@ -17,6 +17,17 @@ public class FileManager {
 	@Autowired
 	private ServletContext servletContext;
 	
+	public boolean remove(String path, String fileName) throws Exception {
+		// 파일을 HDD에서 삭제
+		// 저장된 폴더명, 저장된 파일명 2가지가 필요
+		path = servletContext.getRealPath(path);
+		
+		File file = new File(path, fileName);
+		
+		return file.delete();
+		
+	}
+	
 	public String save(MultipartFile multipartFile, String path) throws Exception {
 		// 파일저장은 tomcat이 아니라 OS에서 저장
 		// 1. 저장 위치 path : /resources/upload/member
