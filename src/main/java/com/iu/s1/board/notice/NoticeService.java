@@ -88,7 +88,7 @@ public class NoticeService implements BoardService {
 			
 			// for(Collection에서 꺼낼타입명 변수명: Collection의변수명){}
 			for(NoticeFileDTO dto : ar) {
-				Boolean check= fileManager.remove("resources/upload/notice/", dto.getFileName());
+				Boolean check = fileManager.remove("resources/upload/notice/", dto.getFileName());
 			}
 			
 		}
