@@ -11,7 +11,7 @@
   <!-- form 태그를 이용해 server로 요청을 보냄 -->
   <form action="./add" method="POST" enctype="multipart/form-data">
     <input type="text" name="title" id="title" placeholder="title">
-    <input type="text" name="writer" id="writer" placeholder="writer">
+    <input type="text" name="writer" id="writer" placeholder="writer" value="${member.id}" readonly>
     <textarea name="contents" id="contents" placeholder="contents"></textarea>
       <div>
         <input type="file" name="files">

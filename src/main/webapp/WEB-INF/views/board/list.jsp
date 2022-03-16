@@ -65,7 +65,9 @@
         <a href="./list?page=${pager.lastNum + 1}">NEXT</a>
       </c:if>
     </div>
-    <a href="./add">글 쓰기</a>
+    <c:if test="${not empty member}">
+    <a href="./add">작성</a>
+    </c:if>
 </div>
 </body>
 </html>

@@ -24,8 +24,10 @@
   </div>
 </body>
   <a href="./list">BACK</a>
+  <c:if test="${member.id eq dto.writer}">
   <a href="./update?num=${dto.num}">수정</a>
   <a href="./delete?num=${dto.num}">삭제</a>
+  </c:if>
   <c:if test="${board ne 'notice'}">
   <a href="./reply?num=${dto.num}">답글</a>
   </c:if>
