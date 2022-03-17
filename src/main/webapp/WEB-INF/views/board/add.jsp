@@ -13,16 +13,24 @@
     <input type="text" name="title" id="title" placeholder="title">
     <input type="text" name="writer" id="writer" placeholder="writer" value="${member.id}" readonly>
     <textarea name="contents" id="contents" placeholder="contents"></textarea>
+      <div id="fileResult">
+      <!---
+        <div>
+          <input type="file" name="files"><button type="button">DEL</button>
+        </div>
+        <input type="file" name="files">
+        <input type="file" name="files">
+      -->
+      </div>
       <div>
-        <input type="file" name="files">
-        <input type="file" name="files">
-        <input type="file" name="files">
+        <button type="button" id="fileAdd">FileADD</button>
       </div>
     <input type="submit" value="Add">
     <div>
     <a href="./list">뒤로 가기</a>
     </div>
-  </form>
+  <!-- </form> -->
   <script type="text/javascript" src="../resources/js/add.js"></script>
+  <script src="../resources/js/file.js"></script>
 </body>
 </html>
