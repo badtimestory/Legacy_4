@@ -24,6 +24,7 @@
       </div>
       <div>
         <button type="button" id="fileAdd">FileADD</button>
+        <button type="button" class="del">Sample DEL</button>
       </div>
     <input type="submit" value="Add">
     <div>
