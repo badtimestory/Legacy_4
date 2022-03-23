@@ -119,5 +119,9 @@ public class QnaService implements BoardService {
 	public QnaFileDTO detailFile(QnaFileDTO qnaFileDTO) throws Exception {
 		return qnaDAO.detailFile(qnaFileDTO);
 	}
+	
+	public int fileDelete(QnaFileDTO qnaFileDTO) throws Exception {
+		return qnaDAO.fileDelete(qnaFileDTO);
+	}
 
 }

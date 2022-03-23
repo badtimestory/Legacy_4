@@ -7,6 +7,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <c:import url="../template/header_css.jsp"></c:import>
+</style>
 </head>
 <body>
 <c:import url="../template/header.jsp"></c:import>
@@ -22,6 +23,20 @@
     	<a href="./fileDown?fileNum=${f.fileNum}">${f.oriName}</a>
     </c:forEach>
   </div>
+  <hr>
+  <!-- <form action="../noticeReply/add" method="POST" enctype="application/x-www-form-urlencoded">  -->
+  <div>
+  	<input type="hidden" name="num" id="num" value="${dto.num}">
+	<input type="text" readonly="readonly" name="writer" id="writer" value="${member.id}">
+	<textarea rows="" cols="" name="contents" id="contents"></textarea>
+  	<button type="button" id="reply">REPLY</button>
+  </div>
+  <!-- </form> -->
+    
+  <table id="replyResult">
+  	
+  </table>
+  
 </body>
   <a href="./list">BACK</a>
   <c:if test="${member.id eq dto.writer}">
@@ -31,4 +46,5 @@
   <c:if test="${board ne 'notice'}">
   <a href="./reply?num=${dto.num}">답글</a>
   </c:if>
+  <script src="../resources/js/noticeReply.js"></script>
 </html>

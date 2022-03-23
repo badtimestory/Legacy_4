@@ -5,6 +5,10 @@
     
  <mapper namespace="com.iu.s1.board.qna.QnaDAO">
  
+ 	<delete id="fileDelete" parameterType="QnaFileDTO">
+ 		DELETE QNAFILE WHERE FILENUM = #{fileNum}
+ 	</delete>
+ 
  	<select id="listFile" parameterType="BoardDTO" resultType="QnaFileDTO">
  	 	SELECT * FROM QNAFILE
  	 	WHERE NUM = #{num}
@@ -113,6 +117,7 @@
 	 	INSERT INTO QNA (NUM, TITLE, CONTENTS, WRITER, REGDATE, HIT, REF, STEP, DEPTH)
 		VALUES (QNA_SEQ.NEXTVAL, #{title}, #{contents}, #{writer}, SYSDATE, 0, #{ref}, #{step}, #{depth})
 	 </insert>
+	 
  
  </mapper>
  

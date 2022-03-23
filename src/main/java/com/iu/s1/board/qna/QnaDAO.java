@@ -69,4 +69,8 @@ public class QnaDAO implements BoardDAO {
 	public List<QnaFileDTO> listFile(BoardDTO boardDTO) throws Exception {
 		return sqlSession.selectList(NAMESPACE+"listFile", boardDTO);
 	}
+	
+	public int fileDelete(QnaFileDTO qnaFileDTO) throws Exception {
+		return sqlSession.delete(NAMESPACE+"fileDelete", qnaFileDTO);
+	}
 }
