@@ -46,6 +46,7 @@ public class FileManager {
 		}
 		
 		// 1. 시간을 이용하는 방법
+		// Calendar는 추상클래스라 직접 객체 생성 불가능
 		Calendar ca = Calendar.getInstance();
 		long l = ca.getTimeInMillis();	// 현재 시간을 밀리세컨즈로 변환
 		System.out.println("Time : " + l);
@@ -61,7 +62,7 @@ public class FileManager {
 		
 		// file HDD에 저장
 		// 1. MultipartFile 클래스의 transferTo 메서드 사용
-//		file = new File(realPath, fileName);
+//		file = new File(realPath, fileName);	// realPath 폴더에 fileName 이름으로 저장
 //		file = new File(file, fileName);
 //		multipartFile.transferTo(file);
 		

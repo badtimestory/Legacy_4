@@ -24,7 +24,7 @@
 	</beans:bean>
 	<!-- view의 이름이 Bean(객체)의 이름과 동일한 이름이 있으면 그 객체를 사용 -->
 	<beans:bean class="org.springframework.web.servlet.view.BeanNameViewResolver">
-		<beans:property name="order" value="0"></beans:property>
+		<beans:property name="order" value="0"/>
 	</beans:bean>
 	
 	<!-- beans를 interceptors 외부에서 id를 설정해줘서 사용하는 방법 -->
@@ -36,6 +36,7 @@
 			<mapping path="/qna/update"/>
 			<mapping path="/qna/delete"/>	 -->
 			<mapping path="/qna/*"/>
+			<!-- qna/list는 인터셉터 제외 -->
 			<exclude-mapping path="/qna/list"/>
 			<beans:ref bean="loginInterceptor"/>
 		</interceptor>

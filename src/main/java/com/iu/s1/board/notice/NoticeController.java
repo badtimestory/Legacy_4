@@ -23,6 +23,8 @@ public class NoticeController {
 	@Autowired
 	private NoticeService noticeService;
 	
+	// 모든 요청마다 추가
+	// mv.addObject("board", "notice");
 	@ModelAttribute("board")
 	public String board() {
 		return "notice";
