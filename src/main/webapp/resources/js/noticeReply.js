@@ -129,6 +129,7 @@ reply.addEventListener("click", function(){
   xhttp.open("POST", "../noticeReply/add");
 
   // 요청 header 정보
+  // send()가 호출되기 전에 호출
   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
   // 요청 전송

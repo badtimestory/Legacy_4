@@ -6,7 +6,7 @@
  <mapper namespace="com.iu.s1.board.qna.QnaDAO">
  
  	<delete id="fileDelete" parameterType="QnaFileDTO">
- 		DELETE QNAFILE WHERE FILENUM = #{fileNum}
+ 		DELETE FROM QNAFILE WHERE FILENUM = #{fileNum}
  	</delete>
  
  	<select id="listFile" parameterType="BoardDTO" resultType="QnaFileDTO">

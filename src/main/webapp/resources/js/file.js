@@ -67,7 +67,7 @@ files.addEventListener("click", function(event) {
       return;
     }
 
-    let fileNum = event.target.getAttribute('data-fileNum')
+    let fileNum = event.target.getAttribute('data-fileNum');
     
     // ajax parameter : fileNum, method : post, URL : fileDelete, Controller : fileDelete
 
